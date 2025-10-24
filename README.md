@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+E-Commerce Platform Demo (Interview Task)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📋 Project Overview
 
-## Available Scripts
+This repository contains a single-page, multi-view React application simulating a foundational e-commerce platform. It is designed to demonstrate proficiency in:
 
-In the project directory, you can run:
+React State Management and Routing (using react-router-dom).
 
-### `npm start`
+External API Interaction (axios for JSON Server REST API).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Database Integration Simulation (Firestore for user-specific data like cart/wishlist).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Authentication Flow (Mocked Google/Firebase Auth for Users & Static Credentials for Admin).
 
-### `npm test`
+Role-Based Access Control (RBAC) for Admin functionality.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application allows two primary user types: Customers (sign in via Google) and Administrators (static login).
 
-### `npm run build`
+✨ Core Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Feature Area
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+User
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Admin
 
-### `npm run eject`
+Authentication
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Google/Firebase Auth (Mocked)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Static Credentials (admin/password123)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Product Display
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+User Data
 
-## Learn More
+Cart and Wishlist management (data stored in simulated Firestore).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Order Placement
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Checkout Cart, placing a new order into the shared database.
 
-### Code Splitting
+Order Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+View personal order history and current status.
 
-### Analyzing the Bundle Size
+View ALL placed orders.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Update order status to 'Shipped' or 'Delivered' (updates visible to the user instantly).
 
-### Making a Progressive Web App
+🚀 Step-by-Step Execution Guide
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To ensure a smooth evaluation, please follow these two main setup stages.
 
-### Advanced Configuration
+Stage 1: Setting up the Mock Product API (JSON Server)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project requires a mock backend to serve product data and handle order persistence via REST calls (http://localhost:5000).
 
-### Deployment
+Install JSON Server globally:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+npm install -g json-server
 
-### `npm run build` fails to minify
+Start the Server: Run the JSON Server from the directory containing db.json:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+json-server --watch db.json --port 5000
+
+
+Keep this terminal window open while running the application.
+
+Stage 2: Running the React Frontend
+
+Dependencies: Ensure you have necessary React dependencies (react, react-dom, react-router-dom, axios, and Tailwind CSS is assumed).
+
+Run Application: Start the React development server.
+
+npm start
+
+Testing the Workflow
+
+Persona
+
+Action
+
+Credentials
+
+Customer
+
+1. Sign in with Google (Mocked).
+Any email/name
+2. Add items to Cart.
+3. Click "Checkout".
+4. Navigate to "My Orders" to see the status "Processing".
+
+Admin
+
+1. Click "Admin Login".
+U: admin / P: password123
+2. Find the new order on the Admin Dashboard.
+3. Change the status from "Processing" to "Shipped".
+
+Customer
+
+5. Go back to "My Orders". The status should update dynamically to "Shipped".
+
+
