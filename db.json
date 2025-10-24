@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+  "id": "1",
+  "name": "Samsung Intel CORE 7",
+  "category": "Laptops",
+  "price": 75000,
+  "stock": 5,
+  "description": "High-performance laptop for coding and graphics."
+  
+},
+
+    {
+      "id": "2",
+      "name": "Classic Cotton T-Shirt",
+      "category": "T-Shirts",
+      "price": 499,
+      "stock": 0,
+      "description": "Comfortable, pure cotton daily wear. Out of stock."
+    },
+    {
+      "id": "3",
+      "name": "Aroma Diffuser Set",
+      "category": "Home Decor",
+      "price": 850,
+      "stock": 14,
+      "description": "Elegant ceramic diffuser with essential oils."
+    },
+    {
+      "id": "4",
+      "name": "Noise-Cancelling Headset",
+      "category": "Headsets",
+      "price": 3500,
+      "stock": 2,
+      "description": "Immersive sound with professional noise cancellation."
+    },
+    {
+      "id": "5",
+      "name": "Gaming Mousepad XL",
+      "category": "Accessories",
+      "price": 799,
+      "stock": 24,
+      "description": "Large surface mousepad for competitive gaming."
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Laptops"
+    },
+    {
+      "id": "2",
+      "name": "Headsets"
+    },
+    {
+      "id": "3",
+      "name": "T-Shirts"
+    },
+    {
+      "id": "4",
+      "name": "Home Decor"
+    },
+    {
+      "id": "5",
+      "name": "Accessories"
+    }
+  ],
+  "wishlist": [],
+  "cart": [],
+  "addresses": [
+    {
+      "id": "c0bd",
+      "street": "Mettu Street",
+      "city": "Puducherry",
+      "userId": "CtSj7dkJuaVbfsPSBdj1tWB7Ooo2"
+    }
+  ],
+  "orders": [
+   
+      
+  ]
+}
